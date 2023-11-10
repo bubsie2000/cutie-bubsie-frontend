@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: [
@@ -8,13 +8,40 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily: {
+        sans: ['Rubik, sans-serif'],
+        dynapuff: ['Dynapuff, sans-serif'],
       },
     },
   },
-  plugins: [],
-}
-export default config
+  plugins: [require('@tailwindcss/typography'), require('daisyui')],
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+          primary: '#f472b6',
+
+          secondary: '#3b82f6',
+
+          accent: '#fde047',
+
+          neutral: '#374151',
+
+          'base-100': '#ffffff',
+
+          info: '#38bdf8',
+
+          success: '#2dd4bf',
+
+          warning: '#fb923c',
+
+          error: '#fb7185',
+        },
+      },
+      'light',
+      'dark',
+      'cupcake',
+    ],
+  },
+};
+export default config;
