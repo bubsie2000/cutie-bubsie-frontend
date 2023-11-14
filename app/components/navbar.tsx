@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import CBLogo from 'public/CutieBubsie_Logo.svg';
-import { HiX, HiOutlineShoppingCart } from 'react-icons/hi';
+import { HiX, HiOutlineShoppingCart, HiUserCircle } from 'react-icons/hi';
 
 export default function Navbar({ children }: { children: React.ReactNode }) {
   return (
@@ -54,7 +54,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
           </div>
           <div className="navbar-end">
             <div className="flex-none hidden lg:block text-secondary">
-              <ul className="menu menu-horizontal items-center">
+              <ul className="menu menu-horizontal items-center content-center">
                 {/* Navbar menu content here */}
                 <li>
                   <Link href="/about">About</Link>
@@ -70,11 +70,11 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
                   <label
                     tabIndex={0}
                     className="btn btn-ghost btn-circle avatar placeholder">
-                    <div className="bg-neutral-focus text-neutral-content rounded-full w-14"></div>
+                    <HiUserCircle className=" w-12 h-12" />
                   </label>
                   <ul
                     tabIndex={0}
-                    className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                    className="mt-3 z-[1] p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52">
                     <li>
                       <Link href="/login">Log In</Link>
                     </li>
@@ -95,9 +95,10 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
         <label
           htmlFor="nav-sidebar"
           aria-label="close sidebar"
-          className="drawer-overlay"></label>
+          className="drawer-overlay">
+        </label>
+        {/* Sidebar content here */}
         <div className="menu p-4 w-full sm:w-9/12 min-h-full bg-base-100 text-secondary">
-          {/* Sidebar content here */}
           <div className="flex justify-between items-center">
             <Link href="/">
               <Image

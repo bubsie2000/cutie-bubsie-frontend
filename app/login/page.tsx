@@ -27,8 +27,8 @@ export default function LogIn() {
           placeholder="Password"
           className="input input-bordered w-full max-w-xs rounded-2xl block"
         />
-        <button className="btn btn-secondary rounded-full w-1/2 block">
-          Log In
+        <button className="btn btn-secondary w-1/2 text-white">
+          LOG IN
         </button>
         <Link href="/signup" className="link link-primary text-lg">
           Create an account
