@@ -38,9 +38,6 @@ const config: Config = {
           error: '#fb7185',
         },
       },
-      'light',
-      'dark',
-      'cupcake',
     ],
   },
 };
