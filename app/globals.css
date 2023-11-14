@@ -5,6 +5,7 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
+  --navbar-height: 4rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,6 +23,27 @@ h2 {
   font-family: Dynapuff;
 }
 
-.btn {
-  @apply block rounded-full;
+ /* Allowance for navbar height so it doesn't cut off the top of page content */
+.navbar + div {
+  margin-top: var(--navbar-height)
+}
+
+.navbar {
+  height: var(--navbar-height)
+}
+
+button.btn {
+  @apply block rounded-full mx-auto;
+}
+
+input.input, input.btn, textarea {
+  @apply rounded-2xl mx-auto;
+}
+
+input.input:not(.inline-block),input.btn, textarea {
+  @apply block;
+} 
+
+input.input, input.btn:not(.mb-0), textarea {
+  @apply mb-6;
 }

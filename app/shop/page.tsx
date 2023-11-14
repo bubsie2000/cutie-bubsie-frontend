@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function Shop() {
   return (
     <div>
-      <h1 className="text-primary text-7xl text-center">SHOP</h1>
+      <h1 className="text-primary text-5xl md:text-7xl text-center">SHOP</h1>
 
       {/* Product Card Component Test */}
       <div className="card w-96 bg-base-100 shadow-xl">

@@ -10,7 +10,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
       <input id="nav-sidebar" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 fixed top-0">
           <div className="navbar-start">
             {/* Show Sidebar button */}
             <div className="flex-none lg:hidden">
@@ -48,7 +48,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
               <Image
                 src={CBLogo}
                 alt="CutieBubsie Logo"
-                className="h-12 w-auto hover:scale-125 hover:rotate-3 transition"
+                className="h-8 md:h-10 w-auto hover:scale-110 transition"
               />
             </Link>
           </div>
@@ -63,9 +63,9 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
                   <Link href="/contact">Contact</Link>
                 </li>
                 {/* Shopping Cart Button Icon */}
-                <button className="btn btn-ghost btn-square btn-secondary">
+                <li><Link href="/cart" className="btn btn-ghost btn-square btn-secondary">
                   <HiOutlineShoppingCart className="w-7 h-7" />
-                </button>
+                </Link></li>
                 <div className="dropdown dropdown-end">
                   <label
                     tabIndex={0}
@@ -104,7 +104,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
               <Image
                 src={CBLogo}
                 alt="CutieBubsie Logo"
-                className="h-12 w-auto hover:scale-110 transition"
+                className="h-10 w-auto hover:scale-110 transition"
               />
             </Link>
             <label
@@ -128,7 +128,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
               <Link href="/contact">Contact</Link>
             </li>
             <li>
-              <a href="/">Cart</a>
+              <Link href="/cart">Cart</Link>
             </li>
             <li>
               <a href="/">Profile</a>
@@ -137,7 +137,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
               <a href="/">Settings</a>
             </li>
             <li>
-              <a href="/">Logout</a>
+              <Link href="/login">Log In</Link>
             </li>
           </ul>
         </div>
