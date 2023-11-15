@@ -1,6 +1,11 @@
 import React from 'react';
 import LoginCover from 'public/Login_cover.png';
 import Image from 'next/image';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Shop',
+};
 
 export default function Shop() {
   return (

@@ -1,7 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 import WingedMail from 'public/Winged_mail.png';
-import CordPhone from 'public/Corded_Phone.png'
+import CordPhone from 'public/Corded_Phone.png';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Contact',
+};
 
 export default function Contact() {
   return (

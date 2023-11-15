@@ -3,10 +3,10 @@ import './globals.css';
 import Navbar from './components/navbar';
 import { Children } from 'react';
 
-export const metadata: Metadata = {
-  title: 'Home',
-  description: 'CutieBubsie website homepage.',
-};
+// export const metadata: Metadata = {
+//   title: 'Home',
+//   description: 'CutieBubsie website homepage.',
+// };
 
 export default function RootLayout({
   children,

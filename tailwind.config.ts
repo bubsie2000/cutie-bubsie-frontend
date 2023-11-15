@@ -12,6 +12,9 @@ const config: Config = {
         sans: ['Rubik, sans-serif'],
         dynapuff: ['Dynapuff, sans-serif'],
       },
+      backgroundImage: {
+        'about-pattern': 'public/About_Pattern_BG.png'
+      }
     },
   },
   plugins: [require('@tailwindcss/typography'), require('daisyui')],

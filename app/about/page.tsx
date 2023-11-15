@@ -1,6 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 import Character03 from 'public/Character_03.png'
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About',
+};
+
 // About Page UI
 export default function About() {
   return (
