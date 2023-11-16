@@ -33,7 +33,6 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
             </div>
             <div className="flex-none hidden lg:block text-secondary hover:text-secondary-focus">
               <ul className="menu menu-horizontal">
-                {/* Navbar menu content here */}
                 <li>
                   <Link href="/shop">Shop</Link>
                 </li>
@@ -55,7 +54,6 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
           <div className="navbar-end">
             <div className="flex-none hidden lg:block text-secondary">
               <ul className="menu menu-horizontal items-center content-center">
-                {/* Navbar menu content here */}
                 <li>
                   <Link href="/about">About</Link>
                 </li>
@@ -63,9 +61,13 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
                   <Link href="/contact">Contact</Link>
                 </li>
                 {/* Shopping Cart Button Icon */}
-                <li><Link href="/cart" className="btn btn-ghost btn-square btn-secondary">
-                  <HiOutlineShoppingCart className="w-7 h-7" />
-                </Link></li>
+                <li>
+                  <Link
+                    href="/cart"
+                    className="btn btn-ghost btn-square btn-secondary">
+                    <HiOutlineShoppingCart className="w-7 h-7" />
+                  </Link>
+                </li>
                 <div className="dropdown dropdown-end">
                   <label
                     tabIndex={0}
@@ -95,8 +97,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
         <label
           htmlFor="nav-sidebar"
           aria-label="close sidebar"
-          className="drawer-overlay">
-        </label>
+          className="drawer-overlay"></label>
         {/* Sidebar content here */}
         <div className="menu p-4 w-full sm:w-9/12 min-h-full bg-base-100 text-secondary">
           <div className="flex justify-between items-center">
@@ -131,13 +132,10 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
               <Link href="/cart">Cart</Link>
             </li>
             <li>
-              <a href="/">Profile</a>
-            </li>
-            <li>
-              <a href="/">Settings</a>
-            </li>
-            <li>
               <Link href="/login">Log In</Link>
+            </li>
+            <li>
+              <Link href="/signup">Sign Up</Link>
             </li>
           </ul>
         </div>
