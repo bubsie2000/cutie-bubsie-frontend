@@ -2,6 +2,7 @@ import React from 'react';
 import LoginCover from 'public/Login_cover.png';
 import Image from 'next/image';
 import type { Metadata } from 'next';
+import ProductCard from '../components/productcard';
 
 export const metadata: Metadata = {
   title: 'Shop',
@@ -9,21 +10,18 @@ export const metadata: Metadata = {
 
 export default function Shop() {
   return (
-    <div>
+    <div className="py-6 px-8">
       <h1 className="text-primary text-5xl md:text-7xl text-center">SHOP</h1>
 
-      {/* Product Card Component Test */}
-      <div className="card w-96 bg-base-100 shadow-xl">
-        <figure className="px-10 pt-10">
-          <Image src={LoginCover} alt="Shoes" className="rounded-xl" />
-        </figure>
-        <div className="card-body items-center text-center">
-          <h2 className="card-title text-secondary">Shoes!</h2>
-          <h3 className="text-primary">$5.50 AUD</h3>
-          <div className="card-actions">
-            <button className="btn btn-primary text-white">Buy Now</button>
-          </div>
-        </div>
+      <div className="mt-8 grid justify-items-center grid-cols-[repeat(auto-fill,minmax(14rem,1fr))] md:grid-cols-[repeat(auto-fill,_minmax(18rem,_1fr))]">
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
       </div>
     </div>
   );

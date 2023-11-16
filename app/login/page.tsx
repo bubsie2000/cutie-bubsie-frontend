@@ -3,12 +3,13 @@ import LoginCover from 'public/Login_cover.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import LogInForm from '../components/loginform';
 
 export const metadata: Metadata = {
   title: 'Log In',
 };
 
-export default function LogIn() {
+export default function LogInPage() {
   return (
     <div className="md:grid md:grid-cols-2 bg-yellow-200 flex-1 flex flex-col mt-16">
       <Image
@@ -18,23 +19,7 @@ export default function LogIn() {
       />
       <div className="prose text-center mt-8 md:my-auto max-w-none">
         <h1 className="text-secondary text-5xl md:text-7xl">LOG IN</h1>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="Email"
-          className="input input-bordered w-full max-w-xs block"
-          required
-        />
-        <input
-          type="password"
-          name="password"
-          id="password"
-          placeholder="Password"
-          className="input input-bordered w-full max-w-xs block"
-          required
-        />
-        <input type="submit" value="LOG IN" className="btn btn-secondary text-white btn-wide mb-5"/>
+        <LogInForm />
         <Link href="/signup" className="link link-primary text-lg">
           Create an account
         </Link>

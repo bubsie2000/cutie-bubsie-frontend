@@ -33,14 +33,14 @@ h2 {
 }
 
 button.btn {
-  @apply block rounded-full mx-auto;
+  @apply rounded-full mx-auto;
 }
 
 input.input, input.btn, textarea {
   @apply rounded-2xl mx-auto;
 }
 
-input.input:not(.inline-block),input.btn, textarea {
+input.input:not(.inline-block),input.btn, button.btn:not(:icon-btn), textarea {
   @apply block;
 } 
 

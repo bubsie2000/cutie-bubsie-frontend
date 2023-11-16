@@ -10,7 +10,7 @@ export default function Navbar({ children }: { children: React.ReactNode }) {
       <input id="nav-sidebar" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
-        <div className="navbar bg-base-100 fixed top-0">
+        <div className="navbar bg-base-100 fixed top-0 z-10">
           <div className="navbar-start">
             {/* Show Sidebar button */}
             <div className="flex-none lg:hidden">
