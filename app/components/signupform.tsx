@@ -23,11 +23,14 @@ export default function SignUpForm() {
     };
 
     // Sign Up
-    const res = await fetch('http://localhost:3000/user', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(user),
-    });
+    const res = await fetch(
+      'https://cutie-bubsie-backend-494f2a6fc9b8.herokuapp.com/user',
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(user),
+      }
+    );
 
     if (res.status === 201) {
       console.log(res.body);
